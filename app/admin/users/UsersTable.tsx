@@ -43,7 +43,7 @@ export default function UsersTable({ rows }: { rows: UserSummary[] }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search name / email / WhatsApp / id"
-          className="min-w-[260px] flex-1 rounded-xl border border-marigold-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-crimson"
+          className="min-w-0 flex-1 basis-full rounded-xl border border-marigold-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-crimson sm:basis-[260px]"
         />
         <select
           value={filter}

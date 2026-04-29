@@ -23,7 +23,7 @@ export default async function AdminDashboard() {
       </header>
 
       <section>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           <Stat label="Bookings (confirmed)" value={String(stats.confirmedBookings)} />
           <Stat
             label="Revenue (confirmed)"
@@ -45,7 +45,8 @@ export default async function AdminDashboard() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-2xl border border-marigold-200/60 bg-cream-50">
-          <table className="w-full">
+         <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px]">
             <thead className="bg-cream-100 text-left text-[11px] uppercase tracking-wider text-ink-mute">
               <tr>
                 <th className="p-4">Event</th>
@@ -87,13 +88,15 @@ export default async function AdminDashboard() {
               })}
             </tbody>
           </table>
+         </div>
         </div>
       </section>
 
       <section>
         <h2 className="mb-4 font-display text-2xl">Recent bookings</h2>
         <div className="overflow-hidden rounded-2xl border border-marigold-200/60 bg-cream-50">
-          <table className="w-full">
+         <div className="overflow-x-auto">
+          <table className="w-full min-w-[760px]">
             <thead className="bg-cream-100 text-left text-[11px] uppercase tracking-wider text-ink-mute">
               <tr>
                 <th className="p-4">Attendee</th>
@@ -127,6 +130,7 @@ export default async function AdminDashboard() {
               ))}
             </tbody>
           </table>
+         </div>
         </div>
       </section>
     </div>

@@ -130,16 +130,40 @@ export default async function AdminLayout({
         </div>
       </aside>
 
-      <div className="px-5 py-6 lg:py-10">
-        {/* Mobile admin tab bar */}
-        <nav className="mb-6 -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 lg:hidden">
+      <div className="px-4 py-5 sm:px-5 lg:py-10">
+        {/* Mobile role badge + admin tab bar */}
+        <div className="mb-4 flex items-center justify-between gap-3 lg:hidden">
+          <div className="min-w-0">
+            <p className="font-display text-[10px] uppercase tracking-[0.25em] text-crimson">
+              Admin Console
+            </p>
+            <p className="truncate text-sm font-medium">
+              {user.name?.split(' ')[0] || 'Admin'}{' '}
+              <span
+                className={`ml-1 inline-flex items-center rounded-full px-1.5 py-0.5 align-middle text-[9px] font-semibold uppercase tracking-wider ${
+                  role === 'super_admin'
+                    ? 'bg-crimson text-cream'
+                    : role === 'vendor'
+                      ? 'bg-leaf/20 text-emerald-800'
+                      : 'bg-marigold-100 text-marigold-700'
+                }`}
+              >
+                {roleLabel}
+              </span>
+            </p>
+          </div>
+        </div>
+        <nav className="mb-6 -mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 sm:-mx-5 sm:gap-2 sm:px-5 lg:hidden">
           {visibleSections.flatMap((s) => s.items).map((it) => (
             <Link
               key={it.href}
               href={it.href}
-              className="shrink-0 rounded-full border border-marigold-200 bg-cream-50 px-4 py-2 text-xs font-semibold text-ink-soft hover:border-crimson hover:text-crimson"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-marigold-200 bg-cream-50 px-3 py-1.5 text-[11px] font-semibold text-ink-soft hover:border-crimson hover:text-crimson sm:px-4 sm:py-2 sm:text-xs"
             >
-              {it.icon} {it.label}
+              <span aria-hidden className="text-marigold-500">
+                {it.icon}
+              </span>
+              <span>{it.label}</span>
             </Link>
           ))}
         </nav>

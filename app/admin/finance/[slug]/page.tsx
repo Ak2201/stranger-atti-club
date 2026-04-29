@@ -74,7 +74,7 @@ export default async function EventFinancePage({
         </p>
       </header>
 
-      <section className="grid gap-3 sm:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Gross" value={`₹${gross.toLocaleString('en-IN')}`} />
         <Stat label="Razorpay fees" value={`₹${fees.toLocaleString('en-IN')}`} />
         <Stat label="Expenses" value={`₹${totalExpenses.toLocaleString('en-IN')}`} />

@@ -55,7 +55,7 @@ export default async function FinancePage() {
 
       <section>
         <h2 className="mb-3 font-display text-lg">This month</h2>
-        <div className="grid gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           <Stat label="Gross revenue" value={`₹${grossThisMonth.toLocaleString('en-IN')}`} />
           <Stat label="YTD gross" value={`₹${grossYTD.toLocaleString('en-IN')}`} />
           <Stat label="YTD refunds" value={`₹${refundedYTD.toLocaleString('en-IN')}`} />

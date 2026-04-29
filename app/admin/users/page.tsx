@@ -31,7 +31,7 @@ export default async function AdminUsers() {
         </p>
       </header>
 
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Users total" value={String(users.length)} />
         <Stat label="Active (7d)" value={String(active)} accent="leaf" />
         <Stat label="Admins" value={String(admins)} />

@@ -119,7 +119,7 @@ export default function AttendeesTable({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search name / phone / email / payment ID"
-          className="min-w-[260px] flex-1 rounded-xl border border-marigold-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-crimson"
+          className="min-w-0 flex-1 basis-full rounded-xl border border-marigold-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-crimson sm:basis-[260px]"
         />
         <select
           value={status}
@@ -175,12 +175,14 @@ export default function AttendeesTable({
               {filtered.map((r) => (
                 <tr key={r.id} className="border-t border-marigold-100 text-sm">
                   <td className="p-3 font-mono text-xs text-ink-mute">
-                    {r.id}
+                    <span className="block max-w-[120px] truncate">{r.id}</span>
                   </td>
                   <td className="p-3">
-                    <p className="font-medium">{r.contactName}</p>
+                    <p className="max-w-[160px] truncate font-medium">
+                      {r.contactName}
+                    </p>
                     {r.attendeeUserEmail && (
-                      <p className="text-[11px] text-ink-mute">
+                      <p className="max-w-[160px] truncate text-[11px] text-ink-mute">
                         Linked: {r.attendeeUserEmail}
                       </p>
                     )}

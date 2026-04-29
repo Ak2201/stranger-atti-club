@@ -39,7 +39,8 @@ export default async function AdminEvents() {
       </header>
 
       <div className="overflow-hidden rounded-2xl border border-marigold-200/60 bg-cream-50">
-        <table className="w-full">
+       <div className="overflow-x-auto">
+        <table className="w-full min-w-[760px]">
           <thead className="bg-cream-100 text-left text-[11px] uppercase tracking-wider text-ink-mute">
             <tr>
               <th className="p-4">Event</th>
@@ -111,6 +112,7 @@ export default async function AdminEvents() {
             })}
           </tbody>
         </table>
+       </div>
       </div>
     </div>
   );

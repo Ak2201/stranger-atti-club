@@ -144,7 +144,7 @@ export default async function UserDetailPage({
       </section>
 
       {/* Booking summary */}
-      <section className="grid gap-3 sm:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Upcoming" value={String(upcoming.length)} />
         <Stat label="Past attended" value={String(past.length)} />
         <Stat label="Cancelled / refunded" value={String(cancelled.length)} />

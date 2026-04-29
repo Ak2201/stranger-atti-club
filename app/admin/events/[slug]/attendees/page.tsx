@@ -47,7 +47,7 @@ export default async function EventAttendees({
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4">
         <Stat label="Confirmed" value={String(confirmed.length)} />
         <Stat label="Cancelled" value={String(cancelled.length)} />
         <Stat label="Capacity" value={`${confirmed.length} / ${ev.capacity}`} />
