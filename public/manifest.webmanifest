@@ -1,0 +1,38 @@
+{
+  "name": "Stranger Atti Club",
+  "short_name": "Stranger Atti",
+  "description": "A common platform for stranger-meets in Chennai. New theme every month.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFF8E7",
+  "theme_color": "#B22222",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "social", "events"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Next event",
+      "url": "/events/fake-sangeeth",
+      "description": "Book the next stranger meetup"
+    },
+    {
+      "name": "Get help",
+      "url": "/code-of-conduct",
+      "description": "Read our code of conduct"
+    }
+  ]
+}

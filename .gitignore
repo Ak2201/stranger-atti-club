@@ -1,0 +1,25 @@
+node_modules
+.next
+out
+dist
+.env
+.env.local
+.env*.local
+.DS_Store
+*.log
+.vercel
+.idea
+.vscode
+android/app/build
+android/.gradle
+android/build
+ios/App/Pods
+ios/App/build
+*.iml
+.capacitor
+# Local SQLite — production uses Turso
+local.db
+local.db-journal
+local.db-shm
+local.db-wal
+test-*.ts
